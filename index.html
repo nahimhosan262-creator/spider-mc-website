@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#07111f">
+  <meta name="description" content="Spider MC — a next-generation Minecraft survival experience. Join the adventure.">
+  <title>Spider MC | Minecraft Network</title>
+  <link rel="icon" href="assets/logo.svg" type="image/svg+xml">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="grid-overlay"></div>
+  <header class="topbar">
+    <a class="brand" href="#home" aria-label="Spider MC home">
+      <img src="assets/logo.svg" alt="" class="brand-logo">
+      <span>SPIDER<span class="brand-accent"> MC</span></span>
+    </a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation" aria-expanded="false">☰</button>
+    <nav id="mainNav">
+      <a href="#home">Home</a><a href="#status">Server Status</a><a href="#features">Features</a><a href="#how-to-join">How to Join</a>
+      <a class="nav-discord" href="https://discord.gg/yP4BKxbQZ" target="_blank" rel="noopener">Discord ↗</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero section-wrap" id="home">
+      <div class="hero-copy">
+        <div class="eyebrow"><span class="pulse-dot"></span> YOUR NEXT ADVENTURE STARTS HERE</div>
+        <h1>ENTER THE<br><span>SPIDER</span> WORLD</h1>
+        <p class="hero-lead">Build your legacy. Fight for survival. Make every moment count.</p>
+        <div class="hero-actions">
+          <a class="btn btn-primary" href="#how-to-join">JOIN THE SERVER <span>→</span></a>
+          <a class="btn btn-ghost" href="#features">EXPLORE FEATURES</a>
+        </div>
+        <div class="hero-mini"><span>✦ JAVA + BEDROCK</span><span>✦ SURVIVAL EXPERIENCE</span><span>✦ COMMUNITY</span></div>
+      </div>
+      <div class="hero-art" aria-label="Spider MC logo artwork">
+        <div class="orbit orbit-one"></div><div class="orbit orbit-two"></div>
+        <div class="hero-glow"></div>
+        <img src="assets/logo.svg" alt="Spider MC spider emblem" class="hero-logo">
+        <div class="floating-tag tag-top">SURVIVE</div><div class="floating-tag tag-bottom">THRIVE</div>
+      </div>
+      <div class="scroll-cue">SCROLL TO EXPLORE <span>↓</span></div>
+    </section>
+
+    <section class="section-wrap status-section" id="status">
+      <div class="section-heading">
+        <div><div class="eyebrow">REAL-TIME CONNECTION</div><h2>SERVER <span>STATUS</span></h2></div>
+        <div class="status-pill"><span class="status-light" id="statusLight"></span><span id="statusText">CHECKING...</span></div>
+      </div>
+      <div class="status-grid">
+        <article class="status-card main-status">
+          <div class="card-label">LIVE PLAYER COUNT</div>
+          <div class="player-count"><strong id="playersOnline">—</strong><span id="playerMax">/ — PLAYERS</span></div>
+          <div class="player-track"><span id="playerBar"></span></div>
+          <p id="statusMessage">Connecting to server status service...</p>
+          <div class="player-list" id="playerList"></div>
+        </article>
+        <article class="status-card">
+          <div class="card-label">SERVER VERSION</div><div class="big-value" id="serverVersion">—</div><p>Live server information</p>
+        </article>
+        <article class="status-card">
+          <div class="card-label">JAVA EDITION</div><div class="big-value small-value">JAVA</div>
+          <button class="copy-line" data-copy="spidersmp.mc-join.org">spidersmp.mc-join.org <span>▣</span></button>
+        </article>
+        <article class="status-card">
+          <div class="card-label">BEDROCK EDITION</div><div class="big-value small-value">BEDROCK</div>
+          <button class="copy-line" data-copy="spidersmp.mc-join.org">spidersmp.mc-join.org <span>▣</span></button>
+          <p>Port: <b>27317</b></p>
+        </article>
+      </div>
+      <p class="updated-note" id="lastUpdated">Status refreshes automatically every 60 seconds.</p>
+    </section>
+
+    <section class="section-wrap features-section" id="features">
+      <div class="section-heading centered">
+        <div class="eyebrow">MADE FOR ADVENTURERS</div><h2>WHY PLAY <span>SPIDER MC?</span></h2>
+        <p>A world packed with challenges, custom content and unforgettable moments.</p>
+      </div>
+      <div class="feature-grid">
+        <article class="feature-card"><div class="feature-icon">⚔</div><h3>LIFESTEAL</h3><p>Fight smart, survive longer and make every battle matter.</p><span class="feature-number">01</span></article>
+        <article class="feature-card"><div class="feature-icon">◇</div><h3>GEMSTEAL</h3><p>Discover a unique progression experience and compete with others.</p><span class="feature-number">02</span></article>
+        <article class="feature-card"><div class="feature-icon">✦</div><h3>CUSTOM CONTENT</h3><p>Explore custom structures, biomes and special craftable items.</p><span class="feature-number">03</span></article>
+        <article class="feature-card"><div class="feature-icon">⌁</div><h3>JAVA + BEDROCK</h3><p>Join from supported Java and Bedrock devices and play together.</p><span class="feature-number">04</span></article>
+        <article class="feature-card"><div class="feature-icon">♜</div><h3>PLAYER ECONOMY</h3><p>Trade, collect rewards and build your place in the community.</p><span class="feature-number">05</span></article>
+        <article class="feature-card"><div class="feature-icon">∞</div><h3>COMMUNITY</h3><p>Meet players, team up and create your own story.</p><span class="feature-number">06</span></article>
+      </div>
+    </section>
+
+    <section class="join-section" id="how-to-join">
+      <div class="section-wrap join-inner">
+        <div class="eyebrow">READY WHEN YOU ARE</div><h2>YOUR ADVENTURE<br>AWAITS.</h2>
+        <p>Copy the server address, open Minecraft and jump into Spider MC.</p>
+        <div class="join-address">
+          <div><small>JAVA SERVER ADDRESS</small><strong>spidersmp.mc-join.org</strong></div>
+          <button class="btn btn-primary copy-main" data-copy="spidersmp.mc-join.org">COPY IP ▣</button>
+        </div>
+        <div class="join-address bedrock-address">
+          <div><small>BEDROCK SERVER · PORT 27317</small><strong>spidersmp.mc-join.org</strong></div>
+          <button class="btn btn-ghost" data-copy="spidersmp.mc-join.org">COPY IP ▣</button>
+        </div>
+        <a class="discord-link" href="https://discord.gg/yP4BKxbQZ" target="_blank" rel="noopener">JOIN OUR DISCORD COMMUNITY ↗</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <a class="brand" href="#home"><img src="assets/logo.svg" alt="" class="brand-logo"><span>SPIDER<span class="brand-accent"> MC</span></span></a>
+    <p>© <span id="year"></span> Spider MC. Not affiliated with Mojang or Microsoft.</p>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
+  <div class="toast" id="toast" role="status" aria-live="polite">Copied!</div>
+  <script src="script.js"></script>
+</body>
+</html>
