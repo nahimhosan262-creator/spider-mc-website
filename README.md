@@ -15,7 +15,7 @@ Open `script.js` and edit the `CONFIG` object:
 
 ```js
 const CONFIG = {
-  javaAddress: "surviva1.hostserv.xyz",
+  javaAddress: "surviva1.hostserv.xyz"
   bedrockAddress: "spidersmp.mc-join.org",
   bedrockPort: 27317,
   refreshMs: 60000
