@@ -4,7 +4,7 @@ const CONFIG = {
   javaAddress: "surviva1.hostserv.xyz",
   bedrockAddress: "spidersmp.mc-join.org",
   bedrockPort: 27317,
-  refreshMs: 60000
+x  refreshMs: 60000
 };
 
 const $ = (id) => document.getElementById(id);
