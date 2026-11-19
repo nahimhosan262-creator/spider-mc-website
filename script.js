@@ -1,7 +1,7 @@
 // Spider MC website settings
 // Change these values if your server address or Discord invite changes.
 const CONFIG = {
-  javaAddress: "spidersmp.mc-join.org",
+  javaAddress: "surviva1.hostserv.xyz",
   bedrockAddress: "spidersmp.mc-join.org",
   bedrockPort: 27317,
   refreshMs: 60000
