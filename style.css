@@ -46,3 +46,63 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 @media(max-width:900px){.topbar{padding:0 5%}nav{gap:15px}.hero{padding-left:7%;padding-right:7%}.hero-art{width:270px;height:270px}.info-grid{grid-template-columns:repeat(2,1fr)}.section{padding:75px 7%}}
 @media(max-width:680px){.topbar{height:65px}.menu-toggle{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;padding:20px;background:#081727;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:13px 5%;border-bottom:1px solid var(--line)}.hero{min-height:auto;padding:80px 7% 95px;display:block}.hero-art{width:210px;height:210px;margin:65px auto 35px}.hero-art img{width:135px;height:135px}h1{font-size:clamp(40px,12vw,65px);letter-spacing:-2px}.hero-sub{font-size:10px;line-height:1.8}.scroll-note{left:7%}.section{padding:65px 6%}.feature-grid{grid-template-columns:repeat(2,1fr);gap:10px}.feature-card{padding:18px}.feature-card h3{font-size:11px}.feature-card p,.info-card p{font-size:11px}.status-panel{padding:16px}.status-grid{gap:5px}.status-item{padding:7px}.status-item strong{font-size:13px}.status-item small{font-size:8px}.join-grid{grid-template-columns:1fr}.server-address{gap:10px}.server-address strong{font-size:11px}.info-grid{gap:10px}.info-card{padding:17px;min-height:190px}.community-box{padding:40px 15px}}
 @media(max-width:380px){.feature-grid,.info-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.status-grid{grid-template-columns:1fr}.status-item{border-right:0;border-bottom:1px solid var(--line)}}
+
+/* SPIDER MC - Continuous Logo Animation */
+.brand img {
+  animation: spiderBrandGlow 3s ease-in-out infinite;
+}
+
+.hero-art img {
+  animation: spider3DFloat 4s ease-in-out infinite,
+             spider3DGlow 3s ease-in-out infinite alternate;
+  transform-style: preserve-3d;
+}
+
+.hero-art::after {
+  content: "";
+  position: absolute;
+  width: 230px;
+  height: 230px;
+  border-radius: 50%;
+  background: linear-gradient(
+    115deg,
+    transparent 35%,
+    rgba(255,255,255,.22) 50%,
+    transparent 65%
+  );
+  background-size: 250% 100%;
+  animation: spiderLightSweep 4s linear infinite;
+  pointer-events: none;
+}
+
+@keyframes spider3DFloat {
+  0%,100% { transform: translateY(0) rotateY(-5deg) rotateX(3deg); }
+  50% { transform: translateY(-16px) rotateY(5deg) rotateX(-3deg); }
+}
+
+@keyframes spider3DGlow {
+  from {
+    filter: drop-shadow(0 0 12px rgba(255,35,35,.65))
+            drop-shadow(0 0 20px rgba(255,190,20,.25));
+  }
+  to {
+    filter: drop-shadow(0 0 25px rgba(255,35,35,.9))
+            drop-shadow(0 0 35px rgba(255,190,20,.65));
+  }
+}
+
+@keyframes spiderBrandGlow {
+  0%,100% { filter: drop-shadow(0 0 3px #ff2525); }
+  50% { filter: drop-shadow(0 0 12px #ffb52e); }
+}
+
+@keyframes spiderLightSweep {
+  from { background-position: 150% 0; }
+  to { background-position: -150% 0; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .brand img, .hero-art img, .hero-art::after {
+    animation: none;
+  }
+}
