@@ -168,3 +168,41 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
     height: 220px;
   }
 }
+
+/* EXTRA LARGE HOME SCREEN SPIDER LOGO */
+.hero-art {
+  width: 400px;
+  height: 400px;
+}
+
+.hero-art img {
+  width: 440px;
+  height: 440px;
+  max-width: none;
+}
+
+@media(max-width:900px) {
+  .hero-art {
+    width: 340px;
+    height: 340px;
+  }
+
+  .hero-art img {
+    width: 390px;
+    height: 390px;
+  }
+}
+
+@media(max-width:680px) {
+  .hero-art {
+    width: 300px;
+    height: 300px;
+    margin: 65px auto 35px;
+  }
+
+  .hero-art img {
+    width: 370px;
+    height: 370px;
+  }
+}
+
