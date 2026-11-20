@@ -206,3 +206,21 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   }
 }
 
+
+/* ACTUAL SPIDER LOGO ZOOM - HOME ONLY */
+@media(max-width:680px) {
+  .hero-art img {
+    animation: spiderHeroZoom 4s ease-in-out infinite,
+               spider3DGlow 3s ease-in-out infinite alternate;
+    transform-origin: center center;
+  }
+}
+
+@keyframes spiderHeroZoom {
+  0%, 100% {
+    transform: scale(2.2) translateY(0);
+  }
+  50% {
+    transform: scale(2.2) translateY(-7px);
+  }
+}
