@@ -47,412 +47,16 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 @media(max-width:680px){.topbar{height:65px}.menu-toggle{display:block}nav{display:none;position:absolute;top:65px;left:0;right:0;padding:20px;background:#081727;border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch;gap:0}nav.open{display:flex}nav a{padding:13px 5%;border-bottom:1px solid var(--line)}.hero{min-height:auto;padding:80px 7% 95px;display:block}.hero-art{width:210px;height:210px;margin:65px auto 35px}.hero-art img{width:135px;height:135px}h1{font-size:clamp(40px,12vw,65px);letter-spacing:-2px}.hero-sub{font-size:10px;line-height:1.8}.scroll-note{left:7%}.section{padding:65px 6%}.feature-grid{grid-template-columns:repeat(2,1fr);gap:10px}.feature-card{padding:18px}.feature-card h3{font-size:11px}.feature-card p,.info-card p{font-size:11px}.status-panel{padding:16px}.status-grid{gap:5px}.status-item{padding:7px}.status-item strong{font-size:13px}.status-item small{font-size:8px}.join-grid{grid-template-columns:1fr}.server-address{gap:10px}.server-address strong{font-size:11px}.info-grid{gap:10px}.info-card{padding:17px;min-height:190px}.community-box{padding:40px 15px}}
 @media(max-width:380px){.feature-grid,.info-grid{grid-template-columns:1fr}.hero-actions .btn{width:100%}.status-grid{grid-template-columns:1fr}.status-item{border-right:0;border-bottom:1px solid var(--line)}}
 
-/* SPIDER MC - Continuous Logo Animation */
-.brand img {
-  animation: spiderBrandGlow 3s ease-in-out infinite;
-}
 
-.hero-art img {
-  animation: spider3DFloat 4s ease-in-out infinite,
-             spider3DGlow 3s ease-in-out infinite alternate;
-  transform-style: preserve-3d;
-}
 
-.hero-art::after {
-  content: "";
-  position: absolute;
-  width: 230px;
-  height: 230px;
-  border-radius: 50%;
-  background: linear-gradient(
-    115deg,
-    transparent 35%,
-    rgba(255,255,255,.22) 50%,
-    transparent 65%
-  );
-  background-size: 250% 100%;
-  animation: spiderLightSweep 4s linear infinite;
-  pointer-events: none;
-}
-
-@keyframes spider3DFloat {
-  0%,100% { transform: translateY(0) rotateY(-5deg) rotateX(3deg); }
-  50% { transform: translateY(-16px) rotateY(5deg) rotateX(-3deg); }
-}
-
-@keyframes spider3DGlow {
-  from {
-    filter: drop-shadow(0 0 12px rgba(255,35,35,.65))
-            drop-shadow(0 0 20px rgba(255,190,20,.25));
-  }
-  to {
-    filter: drop-shadow(0 0 25px rgba(255,35,35,.9))
-            drop-shadow(0 0 35px rgba(255,190,20,.65));
-  }
-}
-
-@keyframes spiderBrandGlow {
-  0%,100% { filter: drop-shadow(0 0 3px #ff2525); }
-  50% { filter: drop-shadow(0 0 12px #ffb52e); }
-}
-
-@keyframes spiderLightSweep {
-  from { background-position: 150% 0; }
-  to { background-position: -150% 0; }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .brand img, .hero-art img, .hero-art::after {
-    animation: none;
-  }
-}
-
-/* SPIDER MC - 3D LOGO RESPONSIVE UPGRADE */
+/* SPIDER MC - CLEAN ANIMATED BLACK HOLE */
 
 .brand img {
-  width: 48px;
-  height: 48px;
-  object-fit: contain;
-  filter: drop-shadow(0 0 7px rgba(0, 174, 255, .65));
-  animation: spiderBrandGlow 3s ease-in-out infinite;
+  animation: brandGlow 3s ease-in-out infinite;
 }
 
-.hero-art img {
-  width: 260px;
-  height: 260px;
-  object-fit: contain;
-  transform-style: preserve-3d;
-  animation: spider3DFloat 4s ease-in-out infinite,
-             spider3DGlow 3s ease-in-out infinite alternate;
-}
-
-.server-identity img {
-  width: 65px;
-  height: 65px;
-  object-fit: contain;
-  border-radius: 12px;
-  padding: 4px;
-  background: #071321;
-  filter: drop-shadow(0 0 8px rgba(0, 174, 255, .35));
-}
-
-@media(max-width:680px) {
-  .brand img {
-    width: 42px;
-    height: 42px;
-  }
-
-  .hero-art img {
-    width: 175px;
-    height: 175px;
-  }
-}
-
-
-/* BIGGER HERO LOGO - HOME SCREEN ONLY */
-.hero-art img {
-  width: 320px;
-  height: 320px;
-}
-
-@media(max-width:900px) {
-  .hero-art img {
-    width: 290px;
-    height: 290px;
-  }
-}
-
-@media(max-width:680px) {
-  .hero-art img {
-    width: 220px;
-    height: 220px;
-  }
-}
-
-/* EXTRA LARGE HOME SCREEN SPIDER LOGO */
-.hero-art {
-  width: 400px;
-  height: 400px;
-}
-
-.hero-art img {
-  width: 440px;
-  height: 440px;
-  max-width: none;
-}
-
-@media(max-width:900px) {
-  .hero-art {
-    width: 340px;
-    height: 340px;
-  }
-
-  .hero-art img {
-    width: 390px;
-    height: 390px;
-  }
-}
-
-@media(max-width:680px) {
-  .hero-art {
-    width: 300px;
-    height: 300px;
-    margin: 65px auto 35px;
-  }
-
-  .hero-art img {
-    width: 370px;
-    height: 370px;
-  }
-}
-
-
-/* ACTUAL SPIDER LOGO ZOOM - HOME ONLY */
-@media(max-width:680px) {
-  .hero-art img {
-    animation: spiderHeroZoom 4s ease-in-out infinite,
-               spider3DGlow 3s ease-in-out infinite alternate;
-    transform-origin: center center;
-  }
-}
-
-@keyframes spiderHeroZoom {
-  0%, 100% {
-    transform: scale(2.2) translateY(0);
-  }
-  50% {
-    transform: scale(2.2) translateY(-7px);
-  }
-}
-
-/* ACTUAL SPIDER LOGO ZOOM - HOME ONLY */
-@media(max-width:680px) {
-  .hero-art img {
-    animation: spiderHeroZoom 4s ease-in-out infinite,
-               spider3DGlow 3s ease-in-out infinite alternate;
-    transform-origin: center center;
-  }
-}
-
-@keyframes spiderHeroZoom {
-  0%, 100% {
-    transform: scale(2.2) translateY(0);
-  }
-  50% {
-    transform: scale(2.2) translateY(-7px);
-  }
-}
-
-/* SPIDER MC - ANIMATED BLACK HOLE */
 .hero-art {
   isolation: isolate;
-  background: radial-gradient(
-    circle,
-    rgba(0, 0, 0, .65) 0%,
-    rgba(9, 20, 48, .25) 45%,
-    transparent 72%
-  );
-}
-
-.hero-art::before {
-  content: "";
-  position: absolute;
-  width: 270px;
-  height: 270px;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    #13bfff,
-    #8a35ff,
-    #ff3030,
-    #ffb52e,
-    transparent,
-    #13bfff
-  );
-  -webkit-mask: radial-gradient(
-    circle,
-    transparent 35%,
-    #000 42%,
-    #000 57%,
-    transparent 65%
-  );
-  mask: radial-gradient(
-    circle,
-    transparent 35%,
-    #000 42%,
-    #000 57%,
-    transparent 65%
-  );
-  filter: blur(5px) drop-shadow(0 0 18px #167cff);
-  animation: blackHoleSpin 5s linear infinite;
-  z-index: 0;
-  pointer-events: none;
-}
-
-.hero-art .orbit {
-  z-index: 1;
-}
-
-.hero-art img {
-  position: relative;
-  z-index: 2;
-}
-
-@keyframes blackHoleSpin {
-  from { transform: rotate(0deg) scale(1); }
-  to { transform: rotate(360deg) scale(1); }
-}
-
-@media(max-width:680px) {
-  .hero-art::before {
-    width: 255px;
-    height: 255px;
-  }
-}
-
-
-/* REALISTIC SPIDER MC BLACK HOLE */
-.hero-art {
-  isolation: isolate;
-}
-
-.hero-art::before {
-  content: "";
-  position: absolute;
-  width: 350px;
-  height: 190px;
-  border-radius: 50%;
-  background: conic-gradient(
-    from 0deg,
-    transparent,
-    #00c8ff,
-    #743cff,
-    #ff245d,
-    #ffae35,
-    #00c8ff,
-    transparent
-  );
-  -webkit-mask: radial-gradient(
-    ellipse,
-    transparent 36%,
-    #000 43%,
-    #000 58%,
-    transparent 69%
-  );
-  mask: radial-gradient(
-    ellipse,
-    transparent 36%,
-    #000 43%,
-    #000 58%,
-    transparent 69%
-  );
-  filter: blur(5px) drop-shadow(0 0 15px #168bff);
-  animation: realBlackHoleDisk 5s linear infinite;
-  z-index: 0;
-}
-
-.hero-art::after {
-  content: "";
-  position: absolute;
-  width: 155px;
-  height: 155px;
-  border-radius: 50%;
-  background: radial-gradient(
-    circle,
-    #000 0%,
-    #000 55%,
-    #05030d 72%,
-    #10152b 85%,
-    transparent 100%
-  );
-  box-shadow:
-    0 0 18px #000,
-    0 0 35px rgba(0, 0, 0, .9),
-    0 0 55px rgba(30, 100, 255, .4);
-  z-index: 2;
-  animation: blackHolePulse 3s ease-in-out infinite;
-}
-
-.hero-art .orbit {
-  z-index: 1;
-}
-
-.hero-art img {
-  position: relative;
-  z-index: 3;
-}
-
-.hero-caption {
-  z-index: 4;
-}
-
-@keyframes realBlackHoleDisk {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
-}
-
-@keyframes blackHolePulse {
-  0%, 100% { transform: scale(1); }
-  50% { transform: scale(1.08); }
-}
-
-
-/* BLACK HOLE FINAL FIX */
-.hero-art {
-  isolation: isolate;
-  background: radial-gradient(
-    ellipse,
-    rgba(0,0,0,.95) 0%,
-    rgba(0,0,0,.85) 22%,
-    transparent 65%
-  ) !important;
-}
-
-.hero-art::before {
-  width: 350px !important;
-  height: 180px !important;
-  background: conic-gradient(
-    #050014,
-    #00c8ff,
-    #792cff,
-    #ff174f,
-    #00c8ff,
-    #050014
-  ) !important;
-  filter: blur(4px) drop-shadow(0 0 20px #247bff) !important;
-  z-index: 1 !important;
-}
-
-.hero-art::after {
-  width: 145px !important;
-  height: 145px !important;
-  background: radial-gradient(
-    circle,
-    #000 0%,
-    #000 68%,
-    #080817 82%,
-    transparent 100%
-  ) !important;
-  box-shadow: 0 0 25px #000, 0 0 45px #142b68 !important;
-  z-index: 2 !important;
-}
-
-.hero-art img {
-  filter: none !important;
-  animation: spiderHeroZoom 4s ease-in-out infinite !important;
-  z-index: 3 !important;
-}
-
-
-/* SPIDER MC - REAL BLACK HOLE ELEMENT */
-.hero-art {
-  isolation: isolate;
-}
-
-.hero-art::before,
-.hero-art::after {
-  content: none !important;
 }
 
 .black-hole {
@@ -460,66 +64,59 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   left: 50%;
   top: 50%;
   width: 270px;
-  height: 270px;
+  height: 170px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 1;
   background: radial-gradient(
     circle,
     #000 0%,
-    #000 24%,
-    #080817 29%,
-    transparent 38%
+    #000 25%,
+    transparent 27%
   );
 }
 
 .black-hole::before {
   content: "";
   position: absolute;
-  left: 50%;
-  top: 50%;
-  width: 125%;
-  height: 58%;
+  inset: 0;
   border-radius: 50%;
   background: conic-gradient(
-    #050014,
     #00cfff,
     #713bff,
     #ff245d,
     #ffb52e,
-    #00cfff,
-    #050014
+    #00cfff
   );
   -webkit-mask: radial-gradient(
     ellipse,
-    transparent 43%,
-    #000 51%,
-    #000 68%,
-    transparent 77%
+    transparent 35%,
+    #000 44%,
+    #000 60%,
+    transparent 72%
   );
   mask: radial-gradient(
     ellipse,
-    transparent 43%,
-    #000 51%,
-    #000 68%,
-    transparent 77%
+    transparent 35%,
+    #000 44%,
+    #000 60%,
+    transparent 72%
   );
-  filter: blur(3px) drop-shadow(0 0 15px #087dff);
-  transform: translate(-50%, -50%) rotate(-18deg);
-  animation: holeDiskSpin 5s linear infinite;
+  filter: blur(4px) drop-shadow(0 0 14px #087dff);
+  animation: holeSpin 5s linear infinite;
 }
 
 .black-hole::after {
   content: "";
   position: absolute;
-  width: 43%;
-  height: 43%;
+  width: 90px;
+  height: 90px;
   left: 50%;
   top: 50%;
   transform: translate(-50%, -50%);
   border-radius: 50%;
-  background: radial-gradient(circle at 35% 30%, #111 0%, #000 65%);
-  box-shadow: 0 0 25px #000, 0 0 45px rgba(0, 0, 0, .9);
+  background: #000;
+  box-shadow: 0 0 28px #000, 0 0 45px rgba(0, 80, 255, .35);
 }
 
 .hero-art .orbit {
@@ -529,50 +126,48 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 .hero-art img {
   position: relative;
   z-index: 3;
+  width: 230px;
+  height: 129px;
+  max-width: 100%;
+  object-fit: contain;
+  transform: none;
+  animation: cleanFloat 4s ease-in-out infinite;
+  filter: drop-shadow(0 0 9px rgba(255, 40, 40, .3));
 }
 
 .hero-art .hero-caption {
   z-index: 4;
 }
 
-@keyframes holeDiskSpin {
-  from { rotate: 0deg; }
-  to { rotate: 360deg; }
+@keyframes holeSpin {
+  to { transform: rotate(360deg); }
 }
 
-@media(max-width:680px) {
-  .black-hole {
-    width: 250px;
-    height: 250px;
-  }
-}
-
-
-/* FIX: HOME LOGO SIZE AND BLACK HOLE */
-.hero-art img {
-  width: 230px !important;
-  height: 230px !important;
-  max-width: 100% !important;
-  object-fit: contain !important;
-  animation: safeSpiderFloat 4s ease-in-out infinite !important;
-  transform: none !important;
-  filter: drop-shadow(0 0 12px rgba(255, 35, 35, .35)) !important;
-}
-
-@keyframes safeSpiderFloat {
+@keyframes cleanFloat {
   0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-8px); }
+  50% { transform: translateY(-7px); }
+}
+
+@keyframes brandGlow {
+  0%, 100% { filter: drop-shadow(0 0 3px #ff2525); }
+  50% { filter: drop-shadow(0 0 9px #ffb52e); }
 }
 
 @media(max-width:680px) {
   .hero-art {
     width: 300px !important;
     height: 300px !important;
+    margin: 65px auto 35px;
   }
 
   .hero-art img {
-    width: 230px !important;
-    height: 230px !important;
+    width: 230px;
+    height: 129px;
+  }
+
+  .black-hole {
+    width: 260px;
+    height: 160px;
   }
 }
 
