@@ -148,3 +148,23 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   }
 }
 
+
+/* BIGGER HERO LOGO - HOME SCREEN ONLY */
+.hero-art img {
+  width: 320px;
+  height: 320px;
+}
+
+@media(max-width:900px) {
+  .hero-art img {
+    width: 290px;
+    height: 290px;
+  }
+}
+
+@media(max-width:680px) {
+  .hero-art img {
+    width: 220px;
+    height: 220px;
+  }
+}
