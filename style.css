@@ -547,3 +547,32 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   }
 }
 
+
+/* FIX: HOME LOGO SIZE AND BLACK HOLE */
+.hero-art img {
+  width: 230px !important;
+  height: 230px !important;
+  max-width: 100% !important;
+  object-fit: contain !important;
+  animation: safeSpiderFloat 4s ease-in-out infinite !important;
+  transform: none !important;
+  filter: drop-shadow(0 0 12px rgba(255, 35, 35, .35)) !important;
+}
+
+@keyframes safeSpiderFloat {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+
+@media(max-width:680px) {
+  .hero-art {
+    width: 300px !important;
+    height: 300px !important;
+  }
+
+  .hero-art img {
+    width: 230px !important;
+    height: 230px !important;
+  }
+}
+
