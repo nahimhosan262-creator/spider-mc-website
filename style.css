@@ -444,3 +444,106 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   z-index: 3 !important;
 }
 
+
+/* SPIDER MC - REAL BLACK HOLE ELEMENT */
+.hero-art {
+  isolation: isolate;
+}
+
+.hero-art::before,
+.hero-art::after {
+  content: none !important;
+}
+
+.black-hole {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 270px;
+  height: 270px;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  z-index: 1;
+  background: radial-gradient(
+    circle,
+    #000 0%,
+    #000 24%,
+    #080817 29%,
+    transparent 38%
+  );
+}
+
+.black-hole::before {
+  content: "";
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  width: 125%;
+  height: 58%;
+  border-radius: 50%;
+  background: conic-gradient(
+    #050014,
+    #00cfff,
+    #713bff,
+    #ff245d,
+    #ffb52e,
+    #00cfff,
+    #050014
+  );
+  -webkit-mask: radial-gradient(
+    ellipse,
+    transparent 43%,
+    #000 51%,
+    #000 68%,
+    transparent 77%
+  );
+  mask: radial-gradient(
+    ellipse,
+    transparent 43%,
+    #000 51%,
+    #000 68%,
+    transparent 77%
+  );
+  filter: blur(3px) drop-shadow(0 0 15px #087dff);
+  transform: translate(-50%, -50%) rotate(-18deg);
+  animation: holeDiskSpin 5s linear infinite;
+}
+
+.black-hole::after {
+  content: "";
+  position: absolute;
+  width: 43%;
+  height: 43%;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  background: radial-gradient(circle at 35% 30%, #111 0%, #000 65%);
+  box-shadow: 0 0 25px #000, 0 0 45px rgba(0, 0, 0, .9);
+}
+
+.hero-art .orbit {
+  z-index: 2;
+}
+
+.hero-art img {
+  position: relative;
+  z-index: 3;
+}
+
+.hero-art .hero-caption {
+  z-index: 4;
+}
+
+@keyframes holeDiskSpin {
+  from { rotate: 0deg; }
+  to { rotate: 360deg; }
+}
+
+@media(max-width:680px) {
+  .black-hole {
+    width: 250px;
+    height: 250px;
+  }
+}
+
