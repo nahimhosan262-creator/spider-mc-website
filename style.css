@@ -112,8 +112,9 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   width: 250px;
   height: 140px;
   object-fit: contain;
-  animation: cleanFloat 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 10px rgba(255, 40, 40, .35));
+  transform-style: preserve-3d;
+  animation: spider3DFloat 4s ease-in-out infinite,
+             spider3DGlow 3s ease-in-out infinite alternate;
 }
 
 .hero-art .hero-caption {
@@ -146,12 +147,7 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   }
 }
 
-@media(prefers-reduced-motion: reduce) {
-  .hero-art .black-hole::before,
-  .hero-art img {
-    animation: none;
-  }
-}
+
 
 /* RESTORE ORIGINAL SPIDER MC ANIMATIONS */
 
