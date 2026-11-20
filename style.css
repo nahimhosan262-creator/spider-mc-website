@@ -49,64 +49,47 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 
 
 
-/* SPIDER MC - CLEAN ANIMATED BLACK HOLE */
 
-.brand img {
-  animation: brandGlow 3s ease-in-out infinite;
-}
 
+/* SPIDER MC - FINAL HOME BLACK HOLE */
 .hero-art {
   isolation: isolate;
 }
 
-.black-hole {
+.hero-art .black-hole {
   position: absolute;
   left: 50%;
   top: 50%;
-  width: 270px;
-  height: 170px;
+  width: 320px;
+  height: 205px;
   transform: translate(-50%, -50%);
   border-radius: 50%;
   z-index: 1;
-  background: radial-gradient(
-    circle,
-    #000 0%,
-    #000 25%,
-    transparent 27%
-  );
+  background: radial-gradient(circle, #000 0 25%, transparent 27%);
 }
 
-.black-hole::before {
+.hero-art .black-hole::before {
   content: "";
   position: absolute;
   inset: 0;
   border-radius: 50%;
   background: conic-gradient(
-    #00cfff,
-    #713bff,
-    #ff245d,
-    #ffb52e,
-    #00cfff
+    #050014, #00cfff, #713bff,
+    #ff245d, #ffb52e, #00cfff, #050014
   );
   -webkit-mask: radial-gradient(
-    ellipse,
-    transparent 35%,
-    #000 44%,
-    #000 60%,
-    transparent 72%
+    ellipse, transparent 34%, #000 43%,
+    #000 62%, transparent 74%
   );
   mask: radial-gradient(
-    ellipse,
-    transparent 35%,
-    #000 44%,
-    #000 60%,
-    transparent 72%
+    ellipse, transparent 34%, #000 43%,
+    #000 62%, transparent 74%
   );
-  filter: blur(4px) drop-shadow(0 0 14px #087dff);
-  animation: holeSpin 5s linear infinite;
+  filter: blur(4px) drop-shadow(0 0 18px #087dff);
+  animation: holeSpin 8s linear infinite;
 }
 
-.black-hole::after {
+.hero-art .black-hole::after {
   content: "";
   position: absolute;
   width: 90px;
@@ -116,7 +99,7 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   transform: translate(-50%, -50%);
   border-radius: 50%;
   background: #000;
-  box-shadow: 0 0 28px #000, 0 0 45px rgba(0, 80, 255, .35);
+  box-shadow: 0 0 35px #000, 0 0 55px rgba(0, 80, 255, .4);
 }
 
 .hero-art .orbit {
@@ -126,13 +109,11 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 .hero-art img {
   position: relative;
   z-index: 3;
-  width: 230px;
-  height: 129px;
-  max-width: 100%;
+  width: 250px;
+  height: 140px;
   object-fit: contain;
-  transform: none;
   animation: cleanFloat 4s ease-in-out infinite;
-  filter: drop-shadow(0 0 9px rgba(255, 40, 40, .3));
+  filter: drop-shadow(0 0 10px rgba(255, 40, 40, .35));
 }
 
 .hero-art .hero-caption {
@@ -140,7 +121,7 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
 }
 
 @keyframes holeSpin {
-  to { transform: rotate(360deg); }
+  to { rotate: 360deg; }
 }
 
 @keyframes cleanFloat {
@@ -148,26 +129,26 @@ h1 span,.section-heading h2 span,.community-box h2 span{color:var(--cyan);text-s
   50% { transform: translateY(-7px); }
 }
 
-@keyframes brandGlow {
-  0%, 100% { filter: drop-shadow(0 0 3px #ff2525); }
-  50% { filter: drop-shadow(0 0 9px #ffb52e); }
-}
-
 @media(max-width:680px) {
   .hero-art {
     width: 300px !important;
     height: 300px !important;
-    margin: 65px auto 35px;
+  }
+
+  .hero-art .black-hole {
+    width: 280px;
+    height: 180px;
   }
 
   .hero-art img {
-    width: 230px;
-    height: 129px;
-  }
-
-  .black-hole {
-    width: 260px;
-    height: 160px;
+    width: 250px;
+    height: 140px;
   }
 }
 
+@media(prefers-reduced-motion: reduce) {
+  .hero-art .black-hole::before,
+  .hero-art img {
+    animation: none;
+  }
+}
